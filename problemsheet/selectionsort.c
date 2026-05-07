@@ -1,7 +1,6 @@
 #include <stdio.h>
 int main()
 {
-
     int n;
     scanf("%d", &n);
     int arr[n];
@@ -11,7 +10,7 @@ int main()
     {
         int minindex = i;
         int minvalue = arr[i];
-        for (int j = i + 1; j < n; j++)
+        for (int j = i; j < n; j++)
         {
             if (arr[j] < minvalue)
             {
