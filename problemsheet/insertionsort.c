@@ -6,22 +6,16 @@ int main()
     int arr[n];
     for (int i = 0; i < n; i++)
         scanf("%d", arr + i);
-
-    for (int j = 1; j < n; j++)
+        
+    for (int i = 1; i < n; i++)
     {
-        int bound = j;
-        while (bound > 0)
+        int cc = i;
+        while (cc >= 1 && arr[cc] < arr[cc - 1])
         {
-            if (arr[bound] < arr[bound - 1])
-            {
-                int temp = arr[bound];
-                arr[bound] = arr[bound - 1];
-                arr[bound - 1] = temp;
-                //swap(arr[bound], arr[bound - 1]);
-            }
-            else
-                break;
-            bound--;
+            int temp = arr[cc];
+            arr[cc] = arr[cc - 1];
+            arr[cc - 1] = temp;
+            cc = cc - 1;
         }
     }
 
