@@ -12,7 +12,6 @@ void inputarray(int *arr, int i, int n)
 }
 int main()
 {
-    /* code */
     int n;
     scanf("%d", &n);
     int arr[n];
