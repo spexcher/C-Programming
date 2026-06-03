@@ -1,13 +1,17 @@
 #include <stdio.h>
-
+#include <stdbool.h>
 int main()
 {
-    /* code */
     FILE *p;
     p = fopen("meme.txt", "r");
-    char secret[50];
-    fgets(secret, 50, p);
-    printf("%s", secret);
+    char secret;
+    while (true)
+    {
+        secret = fgetc(p);
+        printf("%c", secret);
+        if (secret == EOF)
+            break;
+    }
     fclose(p);
     return 0;
 }
