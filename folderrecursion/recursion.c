@@ -2,7 +2,6 @@
 // elements of that array using recursion
 
 #include <stdio.h>
-
 void inputarray(int *arr, int i, int n)
 {
     if (i < n)
@@ -11,7 +10,6 @@ void inputarray(int *arr, int i, int n)
         inputarray(arr + 1, i + 1, n);
     }
 }
-
 int main()
 {
     /* code */
@@ -21,3 +19,4 @@ int main()
     inputarray(arr, 0, n);
     return 0;
 }
+
