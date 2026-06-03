@@ -1,6 +1,5 @@
 // wap in input in an array and print sum of
 // elements of that array using recursion
-
 #include <stdio.h>
 void inputarray(int *arr, int i, int n)
 {
