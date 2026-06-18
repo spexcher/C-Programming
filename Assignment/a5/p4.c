@@ -2,23 +2,17 @@
 
 int main()
 {
-    int y;
-    scanf("%d", &y);
+    int a[5] = {2, 2, 1, 2, 2};
+    int count = 0;
 
-    if (y % 4 == 0)
-    {
-        if (y % 100 == 0)
-        {
-            if (y % 400 == 0)
-                printf("Leap Year");
-            else
-                printf("Not Leap Year");
-        }
-        else
-            printf("Leap Year");
-    }
+    for (int i = 0; i < 5; i++)
+        if (a[i] == 2)
+            count++;
+
+    if (count > 5 / 2)
+        printf("Majority Element = 2");
     else
-        printf("Not Leap Year");
+        printf("No Majority Element");
 
     return 0;
 }

@@ -2,23 +2,18 @@
 
 int main()
 {
-    int a, b, ch;
-    scanf("%d%d%d", &a, &b, &ch);
+    int a[5] = {1, 2, 2, 3, 1};
 
-    switch (ch)
+    for (int i = 0; i < 5; i++)
     {
-    case 1:
-        printf("%d", a + b);
-        break;
-    case 2:
-        printf("%d", a - b);
-        break;
-    case 3:
-        printf("%d", a * b);
-        break;
-    case 4:
-        printf("%d", a / b);
-        break;
+        int c = 0;
+
+        for (int j = 0; j < 5; j++)
+            if (a[i] == a[j])
+                c++;
+
+        if (c == 1)
+            printf("%d ", a[i]);
     }
 
     return 0;
